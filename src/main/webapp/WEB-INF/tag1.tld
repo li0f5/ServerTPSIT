@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no" ?>
+<!DOCTYPE taglib
+        PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
+        "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+
+<taglib>
+
+    <tlibversion>1.0</tlibversion>
+    <jspversion>1.1</jspversion>
+    <shortname>mytaglib</shortname>
+    <uri>/WEB-INF/tag1.tld</uri>
+
+    <tag>
+        <!-- identificazione tag -->
+        <name>query</name>
+        <tagclass>java.TagLib</tagclass>
+        <bodycontent>emtpy</bodycontent>
+        <!-- stringa interrogazione sql -->
+        <attribute>
+            <name>sql</name>
+            <required>true</required>
+        </attribute>
+        <!-- nome della DSN da usare (utilizzo il bridge JDBC-ODBC) -->
+        <attribute>
+            <name>dsn</name>
+            <required>true</required>
+        </attribute>
+        <!-- nome utente -->
+        <attribute>
+            <name>user</name>
+            <required>true</required>
+        </attribute>
+        <!-- password -->
+        <attribute>
+            <name>password</name>
+            <required>true</required>
+        </attribute>
+        <!-- l'elenco dei campi da visualizzare separati da virgole -->
+        <attribute>
+            <name>fields</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+</taglib>

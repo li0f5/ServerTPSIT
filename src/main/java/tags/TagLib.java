@@ -61,7 +61,6 @@ public class TagLib extends SimpleTagSupport {
         JspWriter out = getJspContext().getOut();
         StringTokenizer t;
         String connString;
-        int fieldnum;
 
         /* try to connect to the database */
         try
@@ -74,8 +73,6 @@ public class TagLib extends SimpleTagSupport {
                     connString,
                     user, password
             );
-
-            /* build the connection string <b>(2)</b>*/
 
             /* build the statement and execute the query <b>(3)</b>*/
             Statement st = conn.createStatement();
@@ -111,7 +108,6 @@ public class TagLib extends SimpleTagSupport {
         }
         catch( Exception e )
         {
-            out.println("connessione non riuscita");
             /* any exception */
             throw new JspException( "query:" + e.getMessage() );
         }

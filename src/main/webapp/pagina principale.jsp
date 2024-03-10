@@ -11,7 +11,7 @@
 <body>
     <tg:query
             sql="SELECT nome,cognome FROM studente"
-            dsn="localhost:3306/test"
+            dsn="test"
             user="root"
             password=""
             fields="nome,cognome"

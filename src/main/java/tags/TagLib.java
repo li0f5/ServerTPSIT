@@ -68,14 +68,14 @@ public class TagLib extends SimpleTagSupport {
         {
 
             /* load the database driver and open the connection <b>(1)</b>*/
-            Connection conn;
-            Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+            Class.forName("org.mariadb.jdbc.Driver");
+            connString = "jdbc:mariadb://localhost:3306/" + dsn;
+            Connection conn = DriverManager.getConnection(
+                    connString,
+                    user, password
+            );
 
             /* build the connection string <b>(2)</b>*/
-            connString = "jdbc:mariadb://" + dsn;
-            connString += ";UID=" + user + ";PWD=" + password;
-
-            conn = DriverManager.getConnection(connString);
 
             /* build the statement and execute the query <b>(3)</b>*/
             Statement st = conn.createStatement();

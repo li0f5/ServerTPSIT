@@ -12,7 +12,7 @@
 </head>
 <body>
   <a href="jsp/esercizio1.jsp">esercizio1</a> <br><br>
-  <a href="jsp/pagina%20principale.jsp">pagina accesso</a>
+  <a href="pagina%20principale.jsp">pagina accesso</a>
 
 </body>
 </html>
